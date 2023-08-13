@@ -1,0 +1,40 @@
+
+@use 'variables' as v;
+@use 'button' as b;
+// @use '_variables_secondary' as va;
+
+body{
+  
+    height: 100vh;
+    font-family: v.$font-family;
+    // background-color: va.$primary;
+    background: v.$primary;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+}
+
+.card{
+    width: 500px;
+    height: 300px;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    box-shadow: 3px 4px 10px grey;
+    padding: 1rem;
+    background: white;
+    padding: 2rem;
+
+    h1{
+        font-size: 1.5rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid gray;
+        span{
+            color: green;
+        }
+    }
+    .text{
+        color: #333;
+    }
+}
+
