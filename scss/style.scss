@@ -1,7 +1,8 @@
 
 @use 'variables' as v;
 @use 'button' as b;
-// @use '_variables_secondary' as va;
+@import 'mixins';
+@import 'media';
 
 body{
   
@@ -16,6 +17,13 @@ body{
 }
 
 .card{
+    box-sizing: border-box;
+    @include responsive (xs) {
+        background: red;
+    }
+    @include responsive (xl) {
+        background: orange;
+    }
     width: 500px;
     height: 300px;
     border: 1px solid #ccc;
@@ -29,12 +37,20 @@ body{
         font-size: 1.5rem;
         padding-bottom: 1rem;
         border-bottom: 1px solid gray;
+       
         span{
             color: green;
+            @include responsive(xs) {
+                color: blue;
+            }
         }
     }
     .text{
         color: #333;
+    }
+    ul{
+        
+        @include inline-list;
     }
 }
 
